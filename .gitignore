@@ -1,3 +1,6 @@
+#test_db_docker_volume_
+mysql_test_container_volume
+
 HELP.md
 target/
 !.mvn/wrapper/maven-wrapper.jar
