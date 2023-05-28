@@ -10,8 +10,9 @@ import org.springframework.boot.test.autoconfigure.jdbc.AutoConfigureTestDatabas
 import org.springframework.boot.test.autoconfigure.jdbc.AutoConfigureTestDatabase.Replace;
 import org.springframework.boot.test.context.SpringBootTest;
 
-@SpringBootTest // passes as long "DEV-DB" is running (as specified in
-                // application.yaml/startDevDeb.sh)
+// passes as long "DEV-DB" is running (as specified in
+// application.yaml/startDevDeb.sh)
+@SpringBootTest(properties = "spring.jpa.hibernate.ddl-auto=none") // this better!(?)
 @AutoConfigureTestDatabase(replace = Replace.NONE)
 class TestApplicationTests {
 
