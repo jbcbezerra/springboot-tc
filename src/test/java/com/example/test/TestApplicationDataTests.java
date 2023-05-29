@@ -26,9 +26,7 @@ class TestApplicationDataTests {
     public static MySQLContainer<?> mySQLContainer = new MySQLContainer<>("mysql:8.0.33")
             .withFileSystemBind("./mysql_test_container_volume", "/var/lib/mysql", BindMode.READ_WRITE)
             .withStartupAttempts(1)
-            .withStartupTimeoutSeconds(1200)
-            .withDatabaseName("my_app")
-            .withUsername("my_app");
+            .withStartupTimeoutSeconds(1200);
 
     @DynamicPropertySource
     static void registerMySqlProperties(DynamicPropertyRegistry registry) {
